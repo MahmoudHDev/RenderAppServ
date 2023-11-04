@@ -8,7 +8,11 @@ const port = 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.get('/', (req,res)=> { 
-    res.send("<h1> hello, World </h1>");
+    res.sendFile(__dirname + '/index.html')
+});
+
+app.post('/', (req,res) => { 
+
 });
 
 app.listen(port, () => { 
